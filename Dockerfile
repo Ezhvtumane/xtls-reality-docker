@@ -4,8 +4,6 @@ ARG XRAY_CORE_VERSION=v24.11.21
 ENV SNI=www.samsung.com
 ENV SHORT_ID=aabbccdd
 
-RUN apt install qrencode
-
 RUN set -e &&\
     apk add --no-cache bash libqrencode curl &&\
     wget https://github.com/XTLS/Xray-core/releases/download/${XRAY_CORE_VERSION}/Xray-linux-64.zip &&\
